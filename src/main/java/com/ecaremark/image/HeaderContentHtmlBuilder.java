@@ -9,9 +9,7 @@ import com.ecaremark.entity.MemberInfo;
 
 @Component("headerContentHtmlBuilder")
 class HeaderContentHtmlBuilder implements IHeaderContentBuilder {
-	/* (non-Javadoc)
-	 * @see com.ecaremark.image.IHeaderContentHtmlBuilder#buildContent(com.ecaremark.image.MemberInfo)
-	 */
+	
 	@Override
 	public String buildContent(MemberInfo memberInfo) {
 		StringWriter sw = new StringWriter();
