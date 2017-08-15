@@ -5,6 +5,7 @@ public class Address {
 	public final String city;
 	public final String zipCode;
 	public final String state;
+	
 	public Address(String streetAddress, String city, String zipCode, String state) {
 		super();
 		this.streetAddress = streetAddress;
@@ -12,6 +13,4 @@ public class Address {
 		this.zipCode = zipCode;
 		this.state = state;
 	}
-	
-	
 }
