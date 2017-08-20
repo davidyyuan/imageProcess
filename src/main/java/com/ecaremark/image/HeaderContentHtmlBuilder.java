@@ -9,15 +9,16 @@ import com.ecaremark.entity.MemberInfo;
 
 @Component("headerContentHtmlBuilder")
 class HeaderContentHtmlBuilder implements IHeaderContentBuilder {
+	private static final String TR_CONST = "<tr>";
 	
 	@Override
 	public String buildContent(MemberInfo memberInfo) {
 		StringWriter sw = new StringWriter();
 		sw.append("<table style=\"width:100%;padding: 5px;font-size:24px;\">");
-		sw.append("<tr>" + buildNames(memberInfo) + buildStreetAddress(memberInfo.address)
+		sw.append(TR_CONST + buildNames(memberInfo) + buildStreetAddress(memberInfo.address)
 				+ buildPhone(memberInfo) + "</tr>");
-		sw.append("<tr>" + buildInternalId(memberInfo) + buildAddress(memberInfo.address) + buildEmail(memberInfo) + "</tr>");
-		sw.append("<tr>" + buildDob(memberInfo) + "</tr>");
+		sw.append(TR_CONST + buildInternalId(memberInfo) + buildAddress(memberInfo.address) + buildEmail(memberInfo) + "</tr>");
+		sw.append(TR_CONST + buildDob(memberInfo) + "</tr>");
 		sw.append("</table>");
 		return sw.toString();
 	}
