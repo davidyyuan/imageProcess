@@ -10,6 +10,7 @@ import com.ecaremark.entity.MemberInfo;
 @Component("headerContentHtmlBuilder")
 class HeaderContentHtmlBuilder implements IHeaderContentBuilder {
 	private static final String TR_CONST = "<tr>";
+	private static final String TD_CLOSE_CONST = "</td>";
 	
 	@Override
 	public String buildContent(MemberInfo memberInfo) {
@@ -24,30 +25,30 @@ class HeaderContentHtmlBuilder implements IHeaderContentBuilder {
 	}
 
 	private String buildNames(MemberInfo mberInfo) {
-		return "<td>Last, First: " + mberInfo.lname + ", " + mberInfo.fname + "</td>";
+		return "<td>Last, First: " + mberInfo.lname + ", " + mberInfo.fname + TD_CLOSE_CONST;
 	}
 
 	private String buildStreetAddress(Address address) {
-		return "<td>Street address: " + address.streetAddress + "</td>";
+		return "<td>Street address: " + address.streetAddress + TD_CLOSE_CONST;
 	}
 
 	private String buildPhone(MemberInfo mberInfo) {
-		return "<td>Phone: " + mberInfo.phone + "</td>";
+		return "<td>Phone: " + mberInfo.phone + TD_CLOSE_CONST;
 	}
 
 	private String buildEmail(MemberInfo mberInfo) {
-		return "<td>Email: " + mberInfo.email + "</td>";
+		return "<td>Email: " + mberInfo.email + TD_CLOSE_CONST;
 	}
 	
 	private String buildInternalId(MemberInfo mberInfo) {
-		return "<td>Internal ID: " + mberInfo.memberId + "</td>";
+		return "<td>Internal ID: " + mberInfo.memberId + TD_CLOSE_CONST;
 	}
 
 	private String buildAddress(Address address) {
-		return "<td>City, Zipcode, State: " + address.city + ", " + address.zipCode + ", " + address.state + "</td>";
+		return "<td>City, Zipcode, State: " + address.city + ", " + address.zipCode + ", " + address.state + TD_CLOSE_CONST;
 	}
 
 	private String buildDob(MemberInfo mberInfo) {
-		return "<td>DOB: " + mberInfo.dob + "</td>";
+		return "<td>DOB: " + mberInfo.dob + TD_CLOSE_CONST;
 	}
 }
