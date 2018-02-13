@@ -26,7 +26,7 @@ public class TestImageProcessor {
 		InputStream ip = new FileInputStream(file);
 		MemberInfo mi = createSampleMember();
 		BufferedImage finalImg = target.createImageWithHeader(ip, mi);
-		
+		System.out.println("-----------------tartar");
 		InputStream ip2 = new FileInputStream(file); 
 		final BufferedImage image = ImageIO.read(ip2);
 		assertEquals(finalImg.getHeight(), image.getHeight()+ImageProcessor.HEADER_HEIGHT + ImageProcessor.HEADER_OFFSET);

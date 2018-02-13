@@ -4,6 +4,7 @@
   <test name="Test">
     <classes>
       <class name="com.ecaremark.image.TestImageProcessor"/>
+      <class name="com.ecaremark.image.TestApplication"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
